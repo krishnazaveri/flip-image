@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image flip</title>
+    <style>
+        .main {
+
+            height: 400px;
+            width: 300px;
+            margin: 50px auto;
+            background-color: white;
+            border: 5px solid white;
+            box-shadow: 5px 5px 10px grey;
+            position: relative;
+        }
+
+        .front {
+
+            height: inherit;
+            width: inherit;
+            background-color: pink;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform: rotateY(180deg);
+            transition: 4s;
+            backface-visibility: hidden;
+        }
+
+        .back {
+
+            height: inherit;
+            width: inherit;
+            background-color: purple;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform: rotateY(0deg);
+            transition: 4s;
+            backface-visibility: hidden;
+        }
+
+        .main:hover .back {transform: rotateY(180deg);}
+
+        .main:hover .front {transform: rotateY(0deg);}
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="main">
+        <div class="front">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, aliquid magni architecto ullam officia neque deleniti maxime totam nihil, recusandae harum? Vero omnis inventore quis, velit soluta eaque quibusdam aut?
+        </div>
+        <div class="back">
+            <img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" 
+                alt="" height="100%" width="100%">
+        </div>
+    </div>
+    
+</body>
+</html>
